@@ -30,7 +30,7 @@ public class GameControl : MonoBehaviour
 
     void Update() {
         //If the game is over and the player has pressed some input...
-        if (gameOver && Input.GetMouseButtonDown(0))
+        if (gameOver && (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space)) )
         {
             //...reload the current scene.
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);

@@ -24,7 +24,7 @@ public class Bird : MonoBehaviour
         if (isDead == false)
         {
             //Look for input to trigger a "flap".
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space))
             {
                 //...tell the animator about it and then...
                 anim.SetTrigger("Flap");
